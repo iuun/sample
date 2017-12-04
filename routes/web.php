@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', 'StaticPagesController@home');
-Route::get('/help', 'StaticPagesController@help');
-Route::get('/about', 'StaticPagesController@about');
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+
+Route::get('/signup', 'UsersController@create')->name('signup');
+//这里的name可以随意起名，代表的是这个路由的名称，方便在模板中调用
