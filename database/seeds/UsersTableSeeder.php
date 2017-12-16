@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
         $user = User::find(1);
         $user->name = 'liujun';
         $user->email = '280656495@qq.com';
+        $user->activated = true;
         $user->password = bcrypt('123456asdfgh');
         $user->is_admin = true;
         $user->save();
